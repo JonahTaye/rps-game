@@ -16,4 +16,10 @@ function getComputerChoice() {
     return move
 }
 
-console.log(getComputerChoice())
+function getHumanChoice() {
+    humanMove = prompt("Rock, Paper, or Scissors? ")
+
+    return humanMove.toLowerCase()
+}
+
+console.log(getHumanChoice())
