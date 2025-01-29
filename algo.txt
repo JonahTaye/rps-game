@@ -1,3 +1,41 @@
+rps algorithm:
+first generate a random value between r p s
+	* to generate random numbers we use Math.random and Math.floor
+	* then if the numbers is 1 it equals rock
+		if the number is 2 it equals paper
+		if the number is 3 it equals scissors
+	
+then ask user for input between r p s: make sure the input is case insensitive
+	* made inside a function named getHumanChoice
+	* accepts user input using prompt
+	* prompts returns the accepted value to a var
+	* return the variable with the value
+declare a variable that stores the score of human and computer 
+play a single round of r p s
+	* function name is playRound
+	* accepts to param humanChoice and computerChoice
+	* plays the two moves:
+		human plays r p s
+		computer    r p s
+			equal if both are the same
+			if computer is r or human is r
+				if human is s or computer is s
+					if human is s	
+						human wins
+					else
+						computer wins
+				if human is p or computer is p
+					human loses
+					computer loses
+			if human is r
+				if computer is s
+					computer wins
+				if computer is p 
+					computer loses
+r-p, r-s, p-s
+	* increment the scores of humanScore and computerScore based on the winner
+play a game 5 times
+
 rps is this is ohow it goses
 
 assume if they are both equal they tie 
@@ -59,3 +97,7 @@ human wins
     human rock and computer scissors or human paper and computer is scissors or human is scissors and computer is rock
 else
     computer wins
+
+playing the game 5 times    
+    * function name playGame
+    * move score play
