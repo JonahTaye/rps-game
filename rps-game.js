@@ -7,22 +7,22 @@ function getComputerChoice() {
 
     switch (random) {
         case 1:
-            computerMove = "rock";
+            computerMove = "Rock";
             break
         case 2:
-            computerMove = "paper";
+            computerMove = "Paper";
             break
         default:
-            computerMove = "scissors";     
+            computerMove = "Scissors";     
     }
 
     return computerMove
 }
 
 function getHumanChoice() {
-    humanMove = prompt("Rock, Paper, or Scissors? ");
+    humanMove = prompt("Rock, Paper, or Scissors? ").toLowerCase();
 
-    return humanMove.toLowerCase()
+    return humanMove.charAt(0).toUpperCase() + humanMove.slice(1)
 }
 
 let humanChoice = getHumanChoice();
@@ -33,15 +33,15 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
         console.log("It's a tie")
     } else if(
-        humanChoice == "rock" && computerChoice == "scissors" ||
-        humanChoice == "paper" && computerChoice == "rock" ||
-        humanChoice == "scissors" && computerChoice == "paper"
+        humanChoice == "Rock" && computerChoice == "Scissors" ||
+        humanChoice == "Paper" && computerChoice == "Rock" ||
+        humanChoice == "Scissors" && computerChoice == "Paper"
     ) {
         humanScore += 1;
-        console.log(`You win!! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`)
+        console.log(`You win!! ${humanChoice} beats ${computerChoice}`);
     } else {
         computerScore += 1;
-        console.log(`You lose!! ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)}`)
+        console.log(`You lose!! ${computerChoice} beats ${humanChoice}`);
     }
 }
 
