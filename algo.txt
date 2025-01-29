@@ -100,4 +100,7 @@ else
 
 playing the game 5 times    
     * function name playGame
-    * move score play
+    * move score variables and playRound inside this function
+    * call this function 5 times using loop
+        loop starts at 0 goes it before it reachs 5
+        each iteration calls playRound func
