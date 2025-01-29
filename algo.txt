@@ -1,38 +1,34 @@
-let humanScore = 0;
-let computerScore = 0;
+rps is this is ohow it goses
 
-function getComputerChoice() {
-    let computerMove = ""
-    let random = Math.ceil(Math.random() * 3);
+assume if they are both equal they tie 
+human choice and computer choice:
+       rock > scissors
+       rock < paper
 
-    switch (random) {
-        case 1:
-            computerMove = "rock";
-            break
-        case 2:
-            computerMove = "paper";
-            break
-        default:
-            computerMove = "scissors";     
-    }
+       paper > rock
+       paper < scissors
 
-    return computerMove
-}
+       scissors > paper
+       scissors < rock
 
-function getHumanChoice() {
-    humanMove = prompt("Rock, Paper, or Scissors? ");
+       if human is rock and computer is scissors or paper
+            if computer scissors
+                human wins
+            if computer paper
+                human loses
+       if human is paper 
+            if computer scissors
+                human loses
+            if computer rock
+                human wins
 
-    return humanMove.toLowerCase()
-}
+        if human is scissors
+            if computer rock
+                human loses
+            if computer paper
+                human wins
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
-
-
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice == computerChoice) {
-        console.log("It's a tie")
-    } else if (humanChoice == "rock" || computerChoice == "rock") {
+else if (humanChoice == "rock" || computerChoice == "rock") {
         if (humanChoice == "paper") {
             console.log("You win!! Paper beats Rock")
             humanScore += 1
@@ -75,8 +71,3 @@ function playRound(humanChoice, computerChoice) {
             computerScore += 1
         }
     }
-}
-
-playRound(humanChoice, computerChoice);
-console.log("Human choice: " + humanChoice);
-console.log("Computer choice: " + computerChoice);
