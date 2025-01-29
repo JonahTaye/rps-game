@@ -1,19 +1,19 @@
 function getComputerChoice() {
-    let move = ""
+    let computerMove = ""
     let random = Math.ceil(Math.random() * 3);
 
     switch (random) {
         case 1:
-            move = "rock";
+            computerMove = "rock";
             break
         case 2:
-            move = "paper";
+            computerMove = "paper";
             break
         default:
-            move = "scissors";     
+            computerMove = "scissors";     
     }
 
-    return move
+    return computerMove
 }
 
 function getHumanChoice() {
