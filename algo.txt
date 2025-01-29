@@ -11,23 +11,6 @@ human choice and computer choice:
        scissors > paper
        scissors < rock
 
-       if human is rock and computer is scissors or paper
-            if computer scissors
-                human wins
-            if computer paper
-                human loses
-       if human is paper 
-            if computer scissors
-                human loses
-            if computer rock
-                human wins
-
-        if human is scissors
-            if computer rock
-                human loses
-            if computer paper
-                human wins
-
 else if (humanChoice == "rock" || computerChoice == "rock") {
         if (humanChoice == "paper") {
             console.log("You win!! Paper beats Rock")
@@ -71,3 +54,8 @@ else if (humanChoice == "rock" || computerChoice == "rock") {
             computerScore += 1
         }
     }
+
+human wins
+    human rock and computer scissors or human paper and computer is scissors or human is scissors and computer is rock
+else
+    computer wins

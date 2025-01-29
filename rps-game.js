@@ -32,47 +32,29 @@ let computerChoice = getComputerChoice();
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
         console.log("It's a tie")
-    } else if (humanChoice == "rock" || computerChoice == "rock") {
-        if (humanChoice == "paper") {
-            console.log("You win!! Paper beats Rock")
-            humanScore += 1
-        } else if (computerChoice == "paper") {
-            console.log("You lose!! Paper beats Rock")
-            computerScore += 1
-        } else if (humanChoice == "scissors") {
-            console.log("You lose!! Rock beats Scissors")
-            computerScore += 1
-        } else if (computerChoice == "scissors") {
+    } else if (humanChoice == "rock") {
+        if (computerChoice == "scissors") {
             console.log("You win!! Rock beats Scissors")
             humanScore += 1
+        } else if (computerChoice == "paper") {
+            console.log("You lost!! Paper beats Rock")
+            computerScore += 1
         }
-    } else if (humanChoice == "paper" || computerChoice == "paper") {
-        if (humanChoice == "rock") {
-            console.log("You lose!! Paper beats Rock")
+    } else if (humanChoice == "paper") {
+        if (computerChoice == "scissors") {
+            console.log("You lose!! Scissors beats Paper")
             computerScore += 1
         } else if (computerChoice == "rock") {
-            console.log("You win!! Paper beats Rock")
+            console.log("You win!! Rock beats Scissors")
             humanScore += 1
-        } else if (humanChoice == "scissors") {
-            console.log("You win!! Scissors beats Paper")
-            humanScore += 1
-        } else if (computerChoice == "scissors") {
-            console.log("You lose!! Scissors beats Paper")
-            computerScore += 1
         }
-    } else if (humanChoice == "sicssors" || computerChoice == "sicssors") {
-        if (humanChoice == "paper") {
+    } else if (humanChoice == "scissors") {
+        if (computerChoice == "rock") {
             console.log("You lose!! Scissors beats Paper")
             computerScore += 1
         } else if (computerChoice == "paper") {
-            console.log("You win!! Scissors beats Paper")
+            console.log("You win!! Paper beats Scissors")
             humanScore += 1
-        } else if (humanChoice == "rock") {
-            console.log("You win!! Rock beats Scissors")
-            humanScore += 1
-        } else if (computerChoice == "scissors") {
-            console.log("You lose!! Rock beats Scissors")
-            computerScore += 1
         }
     }
 }
