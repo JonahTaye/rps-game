@@ -29,8 +29,6 @@ function playGame() {
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == computerChoice) {
             console.log("It's a tie")
-            humanScore += 1;
-            computerScore += 1;
         } else if(
             humanChoice == "Rock" && computerChoice == "Scissors" ||
             humanChoice == "Paper" && computerChoice == "Rock" ||
@@ -43,13 +41,15 @@ function playGame() {
             console.log(`You lose!! ${computerChoice} beats ${humanChoice}`);
         }
     }
-
+    console.log("This is the result of your RPS game")
     for (let i = 0; i < 5; i++) {
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
-
+        console.log(`Round ${i + 1}`)
         playRound(humanChoice, computerChoice);
+        console.log(`Current Score => Computer: ${computerScore} vs Human: ${humanScore}`)
     }
+
 }
 
 playGame();
