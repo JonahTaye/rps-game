@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let computerMove = ""
     let random = Math.ceil(Math.random() * 3);
@@ -17,7 +20,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    humanMove = prompt("Rock, Paper, or Scissors? ")
+    humanMove = prompt("Rock, Paper, or Scissors? ");
 
     return humanMove.toLowerCase()
 }
