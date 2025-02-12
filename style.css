@@ -23,13 +23,15 @@ body {
 
 .rps {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
 }
 
 .rps div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 250px;
+    padding: 10px;
 }
 
 .display {
