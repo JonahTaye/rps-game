@@ -104,3 +104,24 @@ playing the game 5 times
     * call this function 5 times using loop
         loop starts at 0 goes it before it reachs 5
         each iteration calls playRound func
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+version 2 of rps
+code seems well written but the ui needs imporvement so how do we do that
+    - a title that says Welcome to the rps game
+    - it might then say you are battling against the computer
+    - first one to 5 wins good luck
+    - below that pick the weapon of your choice
+    - then we will have three divs with images
+        * an image of a rock look for a cartoon icon or svg image with a text that says "Rock"
+        * same type of image of a paper crumbled that says "Paper"
+        * same type of image of a scissor that says "Scissors"
+    - then we will have the score card below that
+        * it will have the title Round (current round)
+        * then an avatar of a human and the score next to it
+        * also an image of a cartoon monitor that has the score next to it
+
+a color scheme of blue found in the odin project and a light yellow
+also needs to have better fonts
