@@ -16,6 +16,18 @@ body {
     font-family: "PT-Sans", Calibri, Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.introduction {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.introduction span {
+    padding: 0 15px;
+    color: #f7e061;
+    background-color: #ffed2938;
+    -webkit-text-stroke: 1px #000000;
+}
+
 .opponent, .instructions, .choice {
     display: flex;
     flex-direction: column;
