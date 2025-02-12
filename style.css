@@ -15,14 +15,37 @@ body {
     gap: 10px;
 }
 
-.opponent, .instructions {
+.opponent, .instructions, .choice {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.choice {
+.rps {
     display: flex;
-    
+    justify-content: space-between;
 }
+
+.rps div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.players {
+    display: flex;
+    justify-content: space-between;
+}
+
+.human, .computer {
+    display: flex;
+}
+
+
+
 
