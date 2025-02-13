@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 
 body {
@@ -53,6 +53,12 @@ body {
 
 .instructions span, .luck {
     color: #f1de6d;
+}
+
+.option {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 10px;
 }
 
 .rps {
