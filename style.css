@@ -41,7 +41,7 @@ body {
     align-items: center;
 }
 
-.opponent {
+.opponent, .instructions {
     font-size: 40px;
     font-weight: 900;
 }
@@ -49,11 +49,6 @@ body {
 .opponent img {
     width: 300px;
     height: auto;
-}
-
-.instructions {
-    font-size: 40px;
-    font-weight: 900;
 }
 
 .instructions span, .luck {
