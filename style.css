@@ -56,7 +56,7 @@ body {
     font-weight: 900;
 }
 
-.instructions span {
+.instructions span, .luck {
     color: #f1de6d;
 }
 
