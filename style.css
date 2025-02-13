@@ -61,9 +61,19 @@ body {
     margin: 10px;
 }
 
+.choice {
+    width: 900px;
+    height: 520px;
+    padding: 10px;
+    margin: 10px;
+    gap: 15px;
+}
+
 .rps {
     display: flex;
     gap: 40px;
+    width: 830px;
+    height: 450px;
 }
 
 .rps div {
