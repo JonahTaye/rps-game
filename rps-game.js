@@ -25,13 +25,6 @@ function getComputerChoice() {
     return computerMove
 }
 
-function getHumanChoice() {
-    humanMove = prompt("Rock, Paper, or Scissors? ").toLowerCase()
-
-    return humanMove.charAt(0).toUpperCase() + humanMove.slice(1)
-}
-
-
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
         displayWinner("T")
