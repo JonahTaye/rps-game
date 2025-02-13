@@ -1,5 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
+const choice = document.querySelector(".choice")
+const score = document.querySelector(".score")
 
 function getComputerChoice() {
     let computerMove = "";
@@ -27,23 +29,19 @@ function getHumanChoice() {
 
 
 function playRound(humanChoice, computerChoice) {
-    let display = document.querySelector(".display")
-
     if (humanChoice == computerChoice) {
-        display.innerHTML = "It's a tie"
+        displayWinner("T")
     } else if(
         humanChoice == "Rock" && computerChoice == "Scissors" ||
         humanChoice == "Paper" && computerChoice == "Rock" ||
         humanChoice == "Scissors" && computerChoice == "Paper"
     ) {
         humanScore += 1
-        display.textContent = `You win!! ${humanChoice} beats ${computerChoice}`
+        displayWinner("W")
     } else {
         computerScore += 1
-        display.textContent = `You lose!! ${computerChoice} beats ${humanChoice}`
+        displayWinner("L")
     }
-
-    displayWinner(display)
 }
 
 function displayWinner(d) {
@@ -57,19 +55,22 @@ function displayWinner(d) {
     }
 }
 
-let choice = document.querySelector(".choice")
 choice.addEventListener('click', (event) => {
-    let target = event.target
+    let target = event.target.closest(".box")
 
     switch(target.id) {
         case 'rock':
+            console.log("rock")
             playRound("Rock", getComputerChoice())
             break
         case 'paper':
+            console.log("paper")
             playRound("Paper", getComputerChoice())
             break
         case 'scissors':
+            console.log("scissors")
             playRound("Scissors", getComputerChoice())
             break
     }
+
 })
