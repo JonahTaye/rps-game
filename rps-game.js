@@ -2,6 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 const choice = document.querySelector(".choice")
 const score = document.querySelector(".score")
+let round = 0
 
 function getComputerChoice() {
     let computerMove = "";
@@ -45,13 +46,18 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function displayWinner(d) {
-    d.innerHTML += `<br>Current Score<br>
-    Human = ${humanScore} vs Computer = ${computerScore}`
+    round++
+    score.textContent = `Round ${round}: `
 
-    if (humanScore > 4) {
-        d.innerHTML = "Congratulations!! You have defeated the Computer"
-    } else if (computerScore > 4) {
-        d.innerHTML = "Sorry, you have lost to the Computer"
+    switch (d) {
+        case "T":
+            score.textContent += "It was a tie"
+            break
+        case "W":
+            score.textContent += "You won this round"
+            break
+        case "L":
+            score.textContent += "You lost this round"
     }
 }
 
