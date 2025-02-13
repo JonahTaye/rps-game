@@ -2,6 +2,8 @@ let humanScore = 0;
 let computerScore = 0;
 const choice = document.querySelector(".choice")
 const score = document.querySelector(".score")
+const humanPoint = document.querySelector(".humanScore")
+const computerPoint = document.querySelector(".computerScore")
 let round = 0
 
 function getComputerChoice() {
@@ -47,17 +49,31 @@ function playRound(humanChoice, computerChoice) {
 
 function displayWinner(d) {
     round++
-    score.textContent = `Round ${round}: `
 
-    switch (d) {
-        case "T":
-            score.textContent += "It was a tie"
-            break
-        case "W":
-            score.textContent += "You won this round"
-            break
-        case "L":
-            score.textContent += "You lost this round"
+    if (humanScore <= 5 && computerScore <= 5) {
+        score.textContent = `Round ${round}: `
+
+        switch (d) {
+            case "T":
+                score.textContent += "It was a tie"
+                break
+            case "W":
+                score.textContent += "You won this round"
+                humanPoint.textContent = humanScore
+                break
+            case "L":
+                score.textContent += "You lost this round"
+                computerPoint.textContent = computerScore
+                break
+        }
+    }
+    
+    if (humanScore >= 5 && computerScore < 5) {
+        score.textContent = "Congratulations!! You have defeated the computer"
+        score.style.color = "#f1de6d"
+    } else if (computerScore >= 5 && humanScore < 5) {
+        score.textContent = "Lmao, You have lost to the computer"
+        score.style.color = "#f1de6d"
     }
 }
 
