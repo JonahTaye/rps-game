@@ -81,6 +81,7 @@ body {
     align-items: center;
     width: 250px;
     padding: 10px 25px;
+    user-select: none;
 }
 
 .box {
