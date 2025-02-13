@@ -54,23 +54,23 @@ function playRound(humanChoice, computerChoice) {
 function displayWinner(d) {
     round++
 
-    if (humanScore <= 5 && computerScore <= 5) {
-        score.textContent = `Round ${round}: `
+   
+    score.textContent = `Round ${round}: `
 
-        switch (d) {
-            case "T":
-                score.textContent += "It was a tie"
-                break
-            case "W":
-                score.textContent += "You won this round"
-                humanPoint.textContent = humanScore
-                break
-            case "L":
-                score.textContent += "You lost this round"
-                computerPoint.textContent = computerScore
-                break
-        }
+    switch (d) {
+        case "T":
+            score.textContent += "It was a tie"
+            break
+        case "W":
+            score.textContent += "You won this round"
+            humanPoint.textContent = humanScore
+            break
+        case "L":
+            score.textContent += "You lost this round"
+            computerPoint.textContent = computerScore
+            break
     }
+
 
     if (humanScore >= 5 && computerScore < 5) {
         score.textContent = "Congratulations!! You have defeated the computer"
