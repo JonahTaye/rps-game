@@ -26,18 +26,28 @@ function getComputerChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+    let value = ""
+
     if (humanChoice == computerChoice) {
-        displayWinner("T")
+        value = "T"
     } else if(
         humanChoice == "Rock" && computerChoice == "Scissors" ||
         humanChoice == "Paper" && computerChoice == "Rock" ||
         humanChoice == "Scissors" && computerChoice == "Paper"
     ) {
         humanScore += 1
-        displayWinner("W")
+        value = "W"
     } else {
         computerScore += 1
-        displayWinner("L")
+        value = "L"
+    }
+
+    if (humanScore <=5 && computerScore <= 5) {
+        displayWinner(value)
+        if (humanScore === 5 || computerScore === 5) {
+            humanScore = 6
+            computerScore = 6
+        }
     }
 }
 
