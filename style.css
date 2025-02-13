@@ -51,6 +51,15 @@ body {
     height: auto;
 }
 
+.instructions {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.instructions span {
+    color: #f1de6d;
+}
+
 .rps {
     display: flex;
     gap: 20px;
