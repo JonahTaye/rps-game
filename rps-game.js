@@ -86,15 +86,12 @@ choice.addEventListener('click', (event) => {
 
     switch(target.id) {
         case 'rock':
-            console.log("rock")
             playRound("Rock", getComputerChoice())
             break
         case 'paper':
-            console.log("paper")
             playRound("Paper", getComputerChoice())
             break
         case 'scissors':
-            console.log("scissors")
             playRound("Scissors", getComputerChoice())
             break
     }
