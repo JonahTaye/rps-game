@@ -38,6 +38,16 @@ body {
     align-items: center;
 }
 
+.opponent {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.opponent img {
+    width: 300px;
+    height: auto;
+}
+
 .rps {
     display: flex;
     gap: 20px;
