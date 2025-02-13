@@ -108,6 +108,7 @@ body {
     align-items: center;
     width: 800px;
     gap: 15px;
+    user-select: none;
 }
 
 .score {
