@@ -67,7 +67,7 @@ function displayWinner(d) {
                 break
         }
     }
-    
+
     if (humanScore >= 5 && computerScore < 5) {
         score.textContent = "Congratulations!! You have defeated the computer"
         score.style.color = "#f1de6d"
@@ -75,6 +75,16 @@ function displayWinner(d) {
         score.textContent = "Lmao, You have lost to the computer"
         score.style.color = "#f1de6d"
     }
+}
+
+function resetGame() {
+    score.textContent = "Let's Play"
+    score.style.color = "white"
+    humanPoint.textContent = 0
+    computerPoint.textContent = 0
+    humanScore = 0
+    computerScore = 0
+    round = 0
 }
 
 choice.addEventListener('click', (event) => {
