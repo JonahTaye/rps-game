@@ -4,6 +4,7 @@ const choice = document.querySelector(".choice")
 const score = document.querySelector(".score")
 const humanPoint = document.querySelector(".humanScore")
 const computerPoint = document.querySelector(".computerScore")
+const button = document.querySelector("button")
 let round = 0
 
 function getComputerChoice() {
@@ -106,3 +107,5 @@ choice.addEventListener('click', (event) => {
     }
 
 })
+
+button.addEventListener('click', () => resetGame())
