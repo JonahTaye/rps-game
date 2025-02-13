@@ -19,8 +19,9 @@ body {
 }
 
 .introduction {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 900;
+    text-align: center;
 }
 
 .introduction span {
