@@ -127,6 +127,15 @@ body {
     color: #f1de6d;
 }
 
-
+button {
+    padding: 10px 20px;
+    background-color: #f1de6d;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #000000;
+    border: 3px white solid;
+    border-radius: 10px;
+}
 
 
